@@ -1,0 +1,5 @@
+[gd_resource type="StreamTexture" format=2]
+
+[resource]
+flags = 4
+load_path = "res://.import/versh4.png-388d73a95a4142ef0136f11c72730c9a.stex"
