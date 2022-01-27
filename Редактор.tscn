@@ -1,0 +1,428 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Image/Cversh2.png" type="Texture" id=1]
+[ext_resource path="res://Control.gd" type="Script" id=2]
+[ext_resource path="res://Image/Cversh1.png" type="Texture" id=3]
+[ext_resource path="res://Image/Kursor1.png" type="Texture" id=4]
+[ext_resource path="res://Image/Kursor2.png" type="Texture" id=5]
+[ext_resource path="res://Image/Musor2.png" type="Texture" id=6]
+[ext_resource path="res://Image/Musor1.png" type="Texture" id=7]
+[ext_resource path="res://StyleRamk1.tres" type="StyleBox" id=8]
+[ext_resource path="res://Txt/14071.otf" type="DynamicFontData" id=10]
+[ext_resource path="res://podps.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Контроль Поля.gd" type="Script" id=12]
+[ext_resource path="res://Control2.gd" type="Script" id=13]
+[ext_resource path="res://Image/chel.png" type="Texture" id=14]
+[ext_resource path="res://Txt/21028.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://Контроль данных.gd" type="Script" id=16]
+[ext_resource path="res://Image/Svaz-2.png" type="Texture" id=19]
+[ext_resource path="res://Image/Svaz-1.png" type="Texture" id=20]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 0.960784, 0.811765, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 19
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.976471, 0.937255, 0.517647, 1 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+outline_size = 1
+outline_color = Color( 0.380392, 0.329412, 0.215686, 1 )
+font_data = ExtResource( 15 )
+
+[node name="Редактор" type="Node"]
+
+[node name="Поле" type="Node" parent="."]
+
+[node name="Panel" type="Panel" parent="Поле"]
+margin_left = 384.0
+margin_top = 104.0
+margin_right = 1424.0
+margin_bottom = 960.0
+rect_pivot_offset = Vector2( 488, 328 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control1" type="Control" parent="Поле"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pole" type="Control" parent="Поле/Control1"]
+margin_left = 384.0
+margin_top = 103.0
+margin_right = 1424.0
+margin_bottom = 959.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Поле/Control1/Pole"]
+visible = false
+modulate = Color( 0.956863, 0.368627, 0.368627, 1 )
+margin_left = -1.0
+margin_right = 1040.0
+margin_bottom = 864.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Svaz" type="Control" parent="Поле/Control1/Pole"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Versh" type="Control" parent="Поле/Control1/Pole"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Задники" type="Control" parent="Поле/Control1"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackR" type="Panel" parent="Поле/Control1/Задники"]
+margin_left = 1424.0
+margin_top = 1.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 269.501, 482.956 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackL" type="Panel" parent="Поле/Control1/Задники"]
+anchor_right = 0.017
+anchor_bottom = 0.067
+margin_right = 383.32
+margin_bottom = 1077.32
+rect_pivot_offset = Vector2( 470, 769.823 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackD" type="Panel" parent="Поле/Control1/Задники"]
+margin_left = 384.0
+margin_top = 960.0
+margin_right = 1592.0
+margin_bottom = 1079.0
+rect_pivot_offset = Vector2( 470, 769.823 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackU" type="Panel" parent="Поле/Control1/Задники"]
+margin_left = 384.0
+margin_right = 1560.0
+margin_bottom = 103.0
+rect_pivot_offset = Vector2( 470, 769.823 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pric" type="TextureRect" parent="Поле/Control1/Задники"]
+margin_left = 384.0
+margin_top = 104.0
+margin_right = 538.0
+margin_bottom = 251.0
+rect_scale = Vector2( 0.390715, 0.390715 )
+mouse_filter = 2
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CV" type="Label" parent="Поле/Control1/Задники"]
+margin_left = 88.0
+margin_top = 656.0
+margin_right = 228.0
+margin_bottom = 681.0
+custom_fonts/font = SubResource( 2 )
+text = "К-во вершин:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CSZ" type="Label" parent="Поле/Control1/Задники"]
+margin_left = 88.0
+margin_top = 688.0
+margin_right = 228.0
+margin_bottom = 713.0
+custom_fonts/font = SubResource( 2 )
+text = "К-во связей:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Поле/Control1/Задники"]
+margin_left = 1552.0
+margin_top = 24.0
+margin_right = 1896.0
+margin_bottom = 1032.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Контроль Поля" type="Control" parent="Поле/Control1"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HScrol" type="HScrollBar" parent="Поле/Control1/Контроль Поля"]
+margin_left = 384.0
+margin_top = 968.0
+margin_right = 1424.0
+margin_bottom = 1008.0
+min_value = -1000.0
+max_value = 1000.0
+step = 5.0
+page = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SScrol" type="HScrollBar" parent="Поле/Control1/Контроль Поля"]
+margin_left = 384.0
+margin_top = 56.0
+margin_right = 576.0
+margin_bottom = 96.0
+min_value = 2.0
+max_value = 1000.0
+step = 1.0
+page = 20.0
+value = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpScrol" type="HScrollBar" parent="Поле/Control1/Контроль Поля"]
+margin_left = 1232.0
+margin_top = 56.0
+margin_right = 1424.0
+margin_bottom = 96.0
+min_value = 1.0
+max_value = 65.0
+step = 1.0
+page = 5.0
+value = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VScrol" type="VScrollBar" parent="Поле/Control1/Контроль Поля"]
+margin_left = 1432.0
+margin_top = 103.0
+margin_right = 1472.0
+margin_bottom = 960.0
+min_value = -1000.0
+max_value = 1000.0
+step = 5.0
+page = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reset" type="Button" parent="Поле/Control1/Контроль Поля"]
+margin_left = 1432.0
+margin_top = 968.0
+margin_right = 1474.0
+margin_bottom = 1008.0
+custom_fonts/font = SubResource( 4 )
+text = "Res"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="x" type="Label" parent="Поле/Control1/Контроль Поля"]
+margin_left = 816.0
+margin_top = 968.0
+margin_right = 1120.0
+margin_bottom = 1007.0
+custom_fonts/font = ExtResource( 11 )
+text = "x :"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="y" type="Label" parent="Поле/Control1/Контроль Поля"]
+margin_left = 1432.0
+margin_top = 632.0
+margin_right = 1664.0
+margin_bottom = 671.0
+rect_rotation = -89.9999
+custom_fonts/font = ExtResource( 11 )
+text = "y :"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="s" type="Label" parent="Поле/Control1/Контроль Поля"]
+margin_left = 384.0
+margin_top = 8.0
+margin_right = 640.0
+margin_bottom = 47.0
+custom_fonts/font = ExtResource( 11 )
+text = "Масштаб:"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sp" type="Label" parent="Поле/Control1/Контроль Поля"]
+margin_left = 1152.0
+margin_top = 8.0
+margin_right = 1408.0
+margin_bottom = 47.0
+custom_fonts/font = ExtResource( 11 )
+text = "Размер поля:"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Контроль данных" type="Control" parent="Поле/Control1"]
+margin_left = 1552.0
+margin_top = 24.0
+margin_right = 1892.05
+margin_bottom = 1032.0
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="Поле/Control1/Контроль данных"]
+margin_left = 16.0
+margin_top = 64.0
+margin_right = 325.0
+margin_bottom = 360.0
+custom_fonts/font = SubResource( 5 )
+show_line_numbers = true
+minimap_width = -14
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Поле/Control1/Контроль данных"]
+margin_left = 96.0
+margin_top = 16.0
+margin_right = 240.0
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 6 )
+text = "Содержание"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Меню" type="Node" parent="."]
+
+[node name="R" type="Node" parent="Меню"]
+
+[node name="L" type="Node" parent="Меню"]
+
+[node name="Ramka" type="Panel" parent="Меню/L"]
+margin_left = 16.0
+margin_top = 104.0
+margin_right = 360.0
+margin_bottom = 264.0
+rect_pivot_offset = Vector2( 470, 769.823 )
+custom_styles/panel = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control2" type="Control" parent="Меню/L"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CSvaz" type="TextureButton" parent="Меню/L/Control2"]
+margin_left = 41.985
+margin_top = 201.215
+margin_right = 1121.98
+margin_bottom = 1285.21
+rect_scale = Vector2( 0.05, 0.05 )
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Musor" type="TextureButton" parent="Меню/L/Control2"]
+margin_left = 184.0
+margin_top = 112.0
+margin_right = 671.0
+margin_bottom = 599.0
+rect_scale = Vector2( 0.181523, 0.184278 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Kursor" type="TextureButton" parent="Меню/L/Control2"]
+margin_left = 24.0
+margin_top = 112.0
+margin_right = 511.0
+margin_bottom = 599.0
+rect_scale = Vector2( 0.18517, 0.18517 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cversh" type="TextureButton" parent="Меню/L/Control2"]
+margin_left = 56.0
+margin_top = 288.0
+margin_right = 1124.0
+margin_bottom = 771.0
+rect_scale = Vector2( 0.24, 0.24 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="scrolling" from="Поле/Control1/Контроль Поля/HScrol" to="Поле/Control1/Контроль Поля" method="_on_HScrol_scrolling"]
+[connection signal="scrolling" from="Поле/Control1/Контроль Поля/SScrol" to="Поле/Control1/Контроль Поля" method="_on_SScrol_scrolling"]
+[connection signal="scrolling" from="Поле/Control1/Контроль Поля/SpScrol" to="Поле/Control1/Контроль Поля" method="_on_SpScrol_scrolling"]
+[connection signal="scrolling" from="Поле/Control1/Контроль Поля/VScrol" to="Поле/Control1/Контроль Поля" method="_on_VScrol_scrolling"]
+[connection signal="button_down" from="Поле/Control1/Контроль Поля/Reset" to="Поле/Control1/Контроль Поля" method="_on_Reset_button_down"]
+[connection signal="text_changed" from="Поле/Control1/Контроль данных/TextEdit" to="Поле/Control1/Контроль данных" method="_on_TextEdit_text_changed"]
+[connection signal="button_down" from="Меню/L/Control2/CSvaz" to="Меню/L/Control2" method="_on_Svaz_button_down"]
+[connection signal="button_down" from="Меню/L/Control2/Musor" to="Меню/L/Control2" method="_on_Musor_button_down"]
+[connection signal="button_down" from="Меню/L/Control2/Musor" to="Поле/Control1/Контроль данных" method="_on_Musor_button_down"]
+[connection signal="button_down" from="Меню/L/Control2/Kursor" to="Меню/L/Control2" method="_on_Kursor_button_down"]
+[connection signal="button_down" from="Меню/L/Control2/Kursor" to="Поле/Control1/Контроль данных" method="_on_Kursor_button_down"]
+[connection signal="button_down" from="Меню/L/Control2/Cversh" to="Поле/Control1/Pole" method="_on_Cversh_button_down"]
